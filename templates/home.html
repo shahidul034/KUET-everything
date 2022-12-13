@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: rgb(195, 216, 216);
+        }
+
+        .whole {
+            margin-top: 150px;
+            border: 5px;
+            text-align: center;
+        }
+
+        .header {
+            font-size: 80px;
+            font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .button {
+            appearance: none;
+            background-color: transparent;
+            border: 2px solid #1A1A1A;
+            border-radius: 15px;
+            box-sizing: border-box;
+            color: #3B3B3B;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 30px;
+            font-weight: 600;
+            line-height: normal;
+            margin: 20px;
+            min-height: 60px;
+            min-width: 0;
+            outline: none;
+            padding: 16px 24px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            
+            will-change: transform;
+        }
+
+        .button:disabled {
+            pointer-events: none;
+        }
+
+        .button:hover {
+            color: #fff;
+            background-color: #1A1A1A;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+            transform: translateY(-2px);
+        }
+
+        .button:active {
+            box-shadow: none;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whole">
+        <h1 class="header">NLP</h1>
+        <a href=chatbot><button class="button button1">KUET CHATBOT</button></a><br>
+        <a href=summarization><button class="button button2">Text Summarization</button></a><br>
+        <a href=error><button class="button button3">Error Correction</button></a><br>
+    </div>
+
+</body>
+
+</html>
