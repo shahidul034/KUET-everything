@@ -52,6 +52,23 @@ def error_correct(inputs):
 	return output[0]['generated_text'][:len(inputs)]
 
 
+
+def conversation(input):
+    API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
+    headers = {"Authorization": "Bearer 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"}
+
+    def query(payload):
+        response = requests.post(API_URL, headers=headers, json=payload)
+        return response.json()
+        
+    output = query({
+        "inputs": {
+            "text": input
+        },
+    })
+    return output['generated_text']
+
+
 #app.route gives the webpage where this functioni will be [triggered],
 #in this case, "/" or home page
 #if a route has post or get forms, needs to be defined
@@ -67,9 +84,9 @@ def Chatbot():
   sentenceUpdate()
   return render_template('chatbot.html')
 
-# @app.route("/summarization")
-# def Summarization():
-#   return render_template('summarization.html')
+@app.route("/summarization")
+def Summarization():
+  return render_template('summarization.html')
 
 
 
@@ -131,6 +148,7 @@ def botResponse(userText):
                 break
         if response_flag==0:
             bot_response=bot_response+' '+"I apologize, I don't understand."
+            bot_response=conversation(userText)
         else:
             flag,out=searching(bot_response,fullText)
             if flag:
