@@ -67,7 +67,7 @@ function getResponse() {
     let userText = $("#textInput").val();
 
     if (userText == "") {
-        userText = "I am feeling Lucky!";
+        userText = "Random";
     }
 
     let userHtml = '<p class="userText"><span>' + userText + '</span></p>';

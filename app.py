@@ -106,6 +106,8 @@ def error_correct(inputs):
 @app.route("/botResponse/<userText>", methods=['GET','POST'])
 def botResponse(userText):
     bot_response=''
+    if userText == "Random":
+        return RemoveBlock("Here is a random information about KUET:<br>" + random.choice(sentenceList))
     #at first only match the first lines for more accurate search, due to the nature of the dataset
     firstLineFlag,matchIndex=checkBlocks(userText)
     if firstLineFlag==1:

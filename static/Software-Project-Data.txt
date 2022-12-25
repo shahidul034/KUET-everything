@@ -416,9 +416,10 @@ Engineering departments and URP department 1200 (One thousand and two hundred) t
 Group B  <br>
 Engineering departments, URP department and
 Architecture department 1300 (One thousand and three hundred) taka only <br> [[Admission fees fee]]
-||Admit Card Collection: After publishing the list of qualified students, they enter into the websitehttps://admissionckruet.ac.bd and login to Dashboard and download the pdf of Admit Card. Admit Card will be color
+||Admit Card Collection: 
+After publishing the list of qualified students, they enter into the websitehttps://admissionckruet.ac.bd and login to Dashboard and download the pdf of Admit Card. Admit Card will be color
 printed in a A4 size white paper. No student will be allowed into the examination hall without the Admit Card.
-||7. Students passed from Foreign Institutes or of GCE ‘O’ Level and GCE ‘A’ Level can apply Online. They can apply
+||Students passed from Foreign Institutes or of GCE ‘O’ Level and GCE ‘A’ Level can apply Online. They can apply
 following the instructions given in website (https://admissionckruet.ac.bd) after paying Admission Test Fees and
 submitting the following documents: <br>
 a) Scanned copy of original Grade Sheet of S.S.C or Equivalent Examination <br>
