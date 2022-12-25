@@ -1,9 +1,10 @@
-||//About//Khulna University of Engineering & Technology (KUET) is one of the leading public universities of Bangladesh giving special emphasis in the Engineering and Technological Education and research. KUET is well known for offering very high quality educational, research and developmental programs in the major disciplines of engineering as well as basic sciences. It has a sober objective to achieve excellence in quality education, research and progression to address the present needs of the country as well as the South-Western region to make it as the "Center of Excellence".
-||//History//Khulna University of Engineering & Technology (KUET), Bangladesh established in 1967 as Khulna Engineering College, starts its long cherished journey in 3 June, 1974 after receiving special direction from the Father of the Nation Bangabandhu Sheikh Mujibur Rahman. Later to ensure the better academic and research capabilities and environment, it is converted to an autonomous institute called Bangladesh Institute of Technology (BIT), Khulna in July 1986. To meet the demands of the days in the academic and research arena, the institute was upgraded and renamed as Khulna University of Engineering & Technology (KUET) in September 2003.[[History]]
+||//About KUET// 
+Khulna University of Engineering & Technology (KUET) is one of the leading public universities of Bangladesh giving special emphasis in the Engineering and Technological Education and research. KUET is well known for offering very high quality educational, research and developmental programs in the major disciplines of engineering as well as basic sciences. It has a sober objective to achieve excellence in quality education, research and progression to address the present needs of the country as well as the South-Western region to make it as the "Center of Excellence".
+||//History// Khulna University of Engineering & Technology (KUET), Bangladesh established in 1967 as Khulna Engineering College, starts its long cherished journey in 3 June, 1974 after receiving special direction from the Father of the Nation Bangabandhu Sheikh Mujibur Rahman. Later to ensure the better academic and research capabilities and environment, it is converted to an autonomous institute called Bangladesh Institute of Technology (BIT), Khulna in July 1986. To meet the demands of the days in the academic and research arena, the institute was upgraded and renamed as Khulna University of Engineering & Technology (KUET) in September 2003.[[History]]
 ||KUET offers engineering education in both undergraduate and post-graduate levels, and also offers degree and conducts research in basic sciences at post-graduate level. At present, around 5240 students are studying in KUET in 20 Academic Department under 3 Faculty. From the academic session (2018-2019), total 1065 top graded students of the country are enrolled yearly in undergraduate level in 16 departments through very competitive, transparent and standard admission test. Besides, quality level graduate study and research in M.Sc, M.Sc Engg, M.Phil and Ph.D. Programs are running in its nourished environment. Students from foreign counties are also studying in this prestigious institute. Around 356 eminent, scholarly and diverse faculties are engaged in teaching at this university in various disciplines.
 ||The campus of this university stands at North-West corner of Khulna City Corporation, about 12 Km from the city center, in the midst of an impressive natural beauty having vast greenery spreading over an area of 101 acres land. <br> 
-||In every year, about seven hundred students graduate from this university at different branches of engineering and technology.[[About]]
-||Graduate Degree Offered <br>
+||In every year, approximately seven hundred students graduate from this university at different branches of engineering and technology.[[About KUET]]
+||Graduate Degree Offered: <br>
 Bachelor of Science in Engineering, Bachelor of URP, Bachelor of Arch <br>
 i) Bachelor of Science in Civil Engineering abbreviated as B.Sc. Eng. (CE) <br>
 ii) Bachelor of Science in Electrical & Electronic Engineering abbreviated as B. Sc. Eng. (EEE) <br>
@@ -268,7 +269,8 @@ Fax	:	+88-041-774403 <br>
 Email	:	head@ese.kuet.ac.bd <br>
 No of Faculty	:	7 <br>
 No of Student	:	128
-||Student Welfate Center: The Mission of Student Welfare Center (SWC) is to facilitate students to discover, promote & enlighten their latent talent, knowledge & thoughts in such way that supports the social and economic improvement of the country. ❯ Central Cafeteria <br>
+||Student Welfate Center (SWC): 
+The Mission of Student Welfare Center (SWC) is to facilitate students to discover, promote & enlighten their latent talent, knowledge & thoughts in such way that supports the social and economic improvement of the country. ❯ Central Cafeteria <br>
 ❯ Open Stage <br>
 ❯ Indoor Game <br>
 ❯ Gymnasium & Swimming Pool <br>
@@ -394,19 +396,26 @@ payment page. <br>
 Step 5: Students will pay Application Fees through Debit Card/Credit Card/Mobile Banking/Internet Banking following the
 table given bellow. “Payment is successful” will be displayed after successful payment and students have to download
 the pay slip.  <br>
-//Admission fees fee//Admission fees:
+Admission fees:
 Group A  <br>
 Departments Admission test fees including service charges
 Engineering departments and URP department 1200 (One thousand and two hundred) taka only <br>
 Group B  <br>
 Engineering departments, URP department and
-Architecture department 1300 (One thousand and three hundred) taka only <br> [[Admission fees fee]]
+Architecture department 1300 (One thousand and three hundred) taka only <br> 
 Step 6: Students can login by giving Application ID and Password through Dashboard of Online application system and
 download Application Form, Application Receipt and Payment Receipt. Admit Card will be downloaded after the
 publication of the list of the qualified students for the Admission Test. <br>
 1. If students select GCE A/O Level in Step 2, he will upload scanned copy of GCE A and O Level Or Equivalent Grade
 Sheets as zip file with other information in the submission form. <br>
 2. If students select tribal to Quota, he will annex certificates in favor of his being a tribal student
+||//Admission fees fee//Admission fees:
+Group A  <br>
+Departments Admission test fees including service charges
+Engineering departments and URP department 1200 (One thousand and two hundred) taka only <br>
+Group B  <br>
+Engineering departments, URP department and
+Architecture department 1300 (One thousand and three hundred) taka only <br> [[Admission fees fee]]
 ||Admit Card Collection: After publishing the list of qualified students, they enter into the websitehttps://admissionckruet.ac.bd and login to Dashboard and download the pdf of Admit Card. Admit Card will be color
 printed in a A4 size white paper. No student will be allowed into the examination hall without the Admit Card.
 ||7. Students passed from Foreign Institutes or of GCE ‘O’ Level and GCE ‘A’ Level can apply Online. They can apply
@@ -415,19 +424,27 @@ submitting the following documents: <br>
 a) Scanned copy of original Grade Sheet of S.S.C or Equivalent Examination <br>
 b) Scanned copy of original Grade Sheet of H.S.C or Equivalent Examination
 ||Criteria of the Qualified Students for the Admission Test: <br>
-(a)//Admission grading//A merit list will be made from the online application received in due time based on the obtained total Grade Point in
+(a)A merit list will be made from the online application received in due time based on the obtained total Grade Point in
 H.S.C or Equivalent examination in Mathematics, Physics, Chemistry and English. If Grade Points are same, the merit
 position will be made based on total marks of Physics, Chemistry and Mathematics; total marks of Physics and
 Chemistry; marks of Physics; and marks of Chemistry sequentially. From this list 33000 (Thirty three thousand)
 students will be qualified to sit for the admission test. All students of the 33000th position will be allowed for the
 admission test. It is noted that students who will not qualify for the admission test,will have their application fees
-refunded being deducted the processing fees. <br>[[Admission grading]]
+refunded being deducted the processing fees. <br>
 c) All the GCE ‘O’ Level and GCE ‘A’ Level passed candidates having minimum qualification will get opportunity to
 sit for the Admission Test. <br>
 d) All the tribal students having minimum qualification will sit for the admission test. <br>
 e) The list of the qualified students for the admission test will be notified on the notice board and website of the university
 respectively as well as on the Combined Admission Test website – https://admissionckruet.ac.bd. It is the student’s
 responsibility to collect his/her own result
+||Admission grading: 
+A merit list will be made from the online application received in due time based on the obtained total Grade Point in
+H.S.C or Equivalent examination in Mathematics, Physics, Chemistry and English. If Grade Points are same, the merit
+position will be made based on total marks of Physics, Chemistry and Mathematics; total marks of Physics and
+Chemistry; marks of Physics; and marks of Chemistry sequentially. From this list 33000 (Thirty three thousand)
+students will be qualified to sit for the admission test. All students of the 33000th position will be allowed for the
+admission test. It is noted that students who will not qualify for the admission test,will have their application fees
+refunded being deducted the processing fees. <br>
 ||Choice of University and Department: <br>
 (A) The order of the choices of University and Departments will be received from all the candidates of the merit list,
 wishing to have admission, through online in the website of the Combined Admission Test

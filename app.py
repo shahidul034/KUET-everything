@@ -7,6 +7,7 @@ import requests,re
 from textblob import Word
 from transformers import pipeline
 import requests
+import random
 #pyinstaller C:\Users\Administrator\Documents\Work\KUET-chatbot\KUETBOT\app.py --add-data "C:\Users\Administrator\Documents\Work\KUET-chatbot\KUETBOT\templates;templates" --add-data "C:\Users\Administrator\Documents\Work\KUET-chatbot\KUETBOT\static;static"
 
 #new instance of flask
@@ -27,46 +28,6 @@ sentenceList = nltk.sent_tokenize("demo")
 fullText="demo"
 stopWords="demo"
 sentenceListFirstLine = ["demo"]
-def summary_return(dat,summarizer):
-  summary = summarizer(dat)[0]["summary_text"]
-  return summary
-def Summarization_out(inp_txt):
-    hub_model_id = r"C:\Users\Inception\Desktop\python project dev\KUET-Everything\model"
-    print("ok6")
-    summarizer = pipeline("summarization", model=hub_model_id)
-    ans=summary_return(inp_txt,summarizer)
-    return ans
-
-
-
-
-API_URL = "https://api-inference.huggingface.co/models/shahidul034/error_correction_Bangla_keyboard_typing2"
-headers = {"Authorization": "Bearer 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"}
-
-def query(payload):
-	response = requests.post(API_URL, headers=headers, json=payload)
-	return response.json()
-	
-def error_correct(inputs):
-	output = query({"inputs":inputs})
-	return output[0]['generated_text'][:len(inputs)]
-
-
-
-def conversation(input):
-    API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
-    headers = {"Authorization": "Bearer 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"}
-
-    def query(payload):
-        response = requests.post(API_URL, headers=headers, json=payload)
-        return response.json()
-        
-    output = query({
-        "inputs": {
-            "text": input
-        },
-    })
-    return output['generated_text']
 
 
 #app.route gives the webpage where this functioni will be [triggered],
@@ -102,6 +63,16 @@ def Summarize():
         out_txt=Summarization_out(inp_txt)
     return render_template("summarization.html",out_txt=out_txt)
 
+def summary_return(dat,summarizer):
+  summary = summarizer(dat)[0]["summary_text"]
+  return summary
+def Summarization_out(inp_txt):
+    hub_model_id = r"C:\Users\Inception\Desktop\python project dev\KUET-Everything\model"
+    print("ok6")
+    summarizer = pipeline("summarization", model=hub_model_id)
+    ans=summary_return(inp_txt,summarizer)
+    return ans
+
 ### ERROR CORRECTION SPECIFIC CODE ###
 
 @app.route('/error', methods=['GET', 'POST'])
@@ -117,6 +88,17 @@ def auto_correction():
         print("ok2")
     return render_template("error.html",out_txt=out_txt)
     
+API_URL = "https://api-inference.huggingface.co/models/shahidul034/error_correction_Bangla_keyboard_typing2"
+headers = {"Authorization": "Bearer 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"}
+
+def query(payload):
+	response = requests.post(API_URL, headers=headers, json=payload)
+	return response.json()
+	
+def error_correct(inputs):
+	output = query({"inputs":inputs})
+	return output[0]['generated_text'][:len(inputs)]
+
 
 ### KUET CHATBOT SPECIFIC CODE ###
 
@@ -147,8 +129,7 @@ def botResponse(userText):
             if j>1:
                 break
         if response_flag==0:
-            bot_response=bot_response+' '+"I apologize, I don't understand."
-            bot_response=conversation(userText)
+            bot_response = BasicConversation(userText)
         else:
             flag,out=searching(bot_response,fullText)
             if flag:
@@ -158,6 +139,31 @@ def botResponse(userText):
         sentenceList.remove(userText)
         return bot_response    
 
+def BasicConversation(userInput):
+    convoList = ["hello hi hey good morning good evening","bye goodbye goodnight"]
+    greetingsReplyList = ["Hey! I am KUETBOT and I am here to give you any information related to KUET.",
+    "Hello! Ask me anything about KUET and I will try to give you an answer.",
+    "Hi! Hope you're having a good day! Ask me anything about KUET."]
+    byeReplyList = ["I hope I was helpful for your querries, see you soon!",
+    "Have a good day and come back anytime!",
+    "If you need more information about KUET, come back anytime!"]
+    convoList.append(userInput)
+    cm=CountVectorizer().fit_transform(convoList)
+    tempInputVector = cm[-1]
+    cm = cm[:-1,:]
+    similarity_scores=cosine_similarity(tempInputVector,cm)
+    similarity_scores_list=similarity_scores.flatten()
+    index=index_sort(similarity_scores_list)
+    convoList.pop()
+    if similarity_scores_list[index[0]]>0.0:
+        if(index[0] == 0):
+            return random.choice(greetingsReplyList)
+        elif(index[0] == 1):
+            return random.choice(byeReplyList)
+    else:
+        return "I apologize, I don't understand."
+
+
 #Updates sentence main sentence list
 def sentenceUpdate():
     global fullText
@@ -166,15 +172,15 @@ def sentenceUpdate():
     global sentenceListFirstLine
     sentenceListFirstLine.clear()
     
-    url= r'https://raw.githubusercontent.com/shahidul034/KUET-chatbot/main/KUETBOT/static/Software-Project-Data.txt'
+    url= r'https://raw.githubusercontent.com/shahidul034/KUET-everything/main/static/Software-Project-Data.txt'
     page = requests.get(url)
     fullText = page.text
 
-    url= r'https://raw.githubusercontent.com/shahidul034/KUET-chatbot/main/KUETBOT/static/StopWords.txt'
+    url= r'https://raw.githubusercontent.com/shahidul034/KUET-everything/main/static/StopWords.txt'
     page = requests.get(url)
     stopWords = page.text.split()
-    # fullText = open(r"C:\\Users\Administrator\Documents\Work\KUET-chatbot\KUETBOT\static\Software-Project-Data.txt",encoding="utf8").read()
-    # stopWords = open(r"C:\\Users\Administrator\Documents\Work\KUET-chatbot\KUETBOT\static\StopWords.txt",encoding="utf8").read().split()
+    # fullText = open(r"C:\\Users\Administrator\Documents\Work\KUET-everything\static\Software-Project-Data.txt",encoding="utf8").read()
+    # stopWords = open(r"C:\\Users\Administrator\Documents\Work\KUET-everything\static\StopWords.txt",encoding="utf8").read().split()
     sentenceList = fullText.split("||")
     for block in sentenceList:
         sentenceListFirstLine.append(block.split('\n')[0])
@@ -197,13 +203,18 @@ def index_sort(list_var):
 def checkBlocks(input):
     global sentenceListFirstLine
     sentenceListFirstLine.append(input)
-    cm=CountVectorizer(stop_words="english").fit_transform(sentenceListFirstLine)
-    similarity_scores=cosine_similarity(cm[-1],cm)
+    #creates word vector
+    cm=CountVectorizer().fit_transform(sentenceListFirstLine)
+    tempInputVector = cm[-1]
+    #used slicing to remove input text vector to avoid full match duplication
+    cm = cm[:-1,:]
+    #find similarity using cosine distance
+    similarity_scores=cosine_similarity(tempInputVector,cm)
     similarity_scores_list=similarity_scores.flatten()
     index=index_sort(similarity_scores_list)
-    index=index[1:]
-    sentenceListFirstLine.remove(input)
+    sentenceListFirstLine.pop()
     if similarity_scores_list[index[0]]>0.0:
+        print(sentenceListFirstLine[index[0]],file=sys.stderr)
         return 1,index[0]
     else:
         return 0,0
@@ -228,15 +239,15 @@ def searching(botResponse,fullText):
             #only starting of a block is found, search for whole block including block end in the fulltext and return
             search2 = re.search(search_string,fullText,re.MULTILINE)
             if search2:
-                print("whole block found",file=sys.stderr)
+                #print("whole block found",file=sys.stderr)
                 msg=search2.group()
                 msg = RemoveBlock(msg)
                 return 1,msg
             else:
-                print("start block found but whole block not found",file=sys.stderr)
+                #print("start block found but whole block not found",file=sys.stderr)
                 return 0,"" 
     else:
-        print("start block not found",file=sys.stderr)
+        #print("start block not found",file=sys.stderr)
         #start block not found, replacing end block if exists
         botResponse=RemoveBlock(botResponse)
         return 1,botResponse
@@ -246,6 +257,21 @@ def RemoveBlock(msg):
     msg=re.sub("\[\[.*\]\]","",msg)
     msg=re.sub("\|\|","",msg)
     return msg
+
+def conversation(input):
+    API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
+    headers = {"Authorization": "Bearer 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"}
+
+    def query(payload):
+        response = requests.post(API_URL, headers=headers, json=payload)
+        return response.json()
+        
+    output = query({
+        "inputs": {
+            "text": input
+        },
+    })
+    return output['generated_text']
 
 if __name__ == "__main__":
     app.run(debug=True)
