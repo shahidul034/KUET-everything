@@ -18,7 +18,7 @@ pip install Flask
 To install the chatbot, you can download the code from the GitHub repository:
 
 ```
-git clone https://github.com/<username>/<repository>.git
+git clone https://github.com/shahidul034/KUET-everything.git
 ```
 
 ## Usage
